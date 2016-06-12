@@ -7,11 +7,13 @@
 //
 //http://www.jianshu.com/p/06e7cf7bf02d
 //iOS开发技巧----给图片添加水印
-
-
+//http://www.jianshu.com/p/8d7c302c7b01
+//给图片添加水印
 
 
 #import "ViewController.h"
+#import "UIImage+WaterMark.h"
+
 @interface ViewController ()
 @property(strong,nonatomic)UIImageView *imgView;
 @property(strong,nonatomic)UIImage *img;
@@ -32,13 +34,15 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-   
+//addLogo
+//第一种方法
+    /*
     //开启位图
     UIGraphicsBeginImageContextWithOptions(self.img.size, NO, 0);
     //绘制原生的图片
     [self.img drawAtPoint:CGPointZero];
     //给原生的图片添加文字
-    NSString *str = @"AlezJi";
+    NSString *str = @"LogoByAlezJi";
     //创建字典属性
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[NSForegroundColorAttributeName] = [UIColor redColor];
@@ -48,8 +52,26 @@
     UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
     //关闭上下文（自己开启的自己关闭）
     UIGraphicsEndImageContext();
-    
     self.imgView.image =newImg;
+     */
+    
+//第二种方法
+    //图片
+    UIImage *waterMarkImg = [UIImage imageNamed:@"logo.png"];
+    UIImage *newWaterMarkImg= [UIImage imageWithUIImage:self.img watermarkOfImage:waterMarkImg position:WatermarkPositonTopRight];
+    self.imgView.image =newWaterMarkImg;
+    
+    
+    
+    //文字
+    NSMutableDictionary *attrDict = [NSMutableDictionary dictionary];
+    attrDict[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    attrDict[NSFontAttributeName] = [UIFont systemFontOfSize:18.f];
+    NSAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"CreateByJi" attributes:attrDict];
+    //添加了图片后再加文字
+    UIImage *imageWithImageAndTextWatermark = [UIImage imageWithUIImage:newWaterMarkImg watermarkOfText:attrString position:WatermarkPositonBottomLeft];
+    self.imgView.image = imageWithImageAndTextWatermark;
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -16,6 +16,8 @@
 		84413D9C1D0D2BD0003AA001 /* ImageAddLogoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84413D9B1D0D2BD0003AA001 /* ImageAddLogoTests.m */; };
 		84413DA71D0D2BD0003AA001 /* ImageAddLogoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84413DA61D0D2BD0003AA001 /* ImageAddLogoUITests.m */; };
 		84413DB51D0D2C12003AA001 /* ns_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84413DB41D0D2C12003AA001 /* ns_1.jpg */; };
+		84413EF61D0D3B69003AA001 /* UIImage+WaterMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 84413EF51D0D3B69003AA001 /* UIImage+WaterMark.m */; };
+		84413EF81D0D3CC2003AA001 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84413EF71D0D3CC2003AA001 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		84413DA61D0D2BD0003AA001 /* ImageAddLogoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageAddLogoUITests.m; sourceTree = "<group>"; };
 		84413DA81D0D2BD0003AA001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84413DB41D0D2C12003AA001 /* ns_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ns_1.jpg; sourceTree = "<group>"; };
+		84413EF41D0D3B69003AA001 /* UIImage+WaterMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WaterMark.h"; sourceTree = "<group>"; };
+		84413EF51D0D3B69003AA001 /* UIImage+WaterMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WaterMark.m"; sourceTree = "<group>"; };
+		84413EF71D0D3CC2003AA001 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +109,13 @@
 			isa = PBXGroup;
 			children = (
 				84413DB41D0D2C12003AA001 /* ns_1.jpg */,
+				84413EF71D0D3CC2003AA001 /* logo.png */,
 				84413D841D0D2BD0003AA001 /* AppDelegate.h */,
 				84413D851D0D2BD0003AA001 /* AppDelegate.m */,
 				84413D871D0D2BD0003AA001 /* ViewController.h */,
 				84413D881D0D2BD0003AA001 /* ViewController.m */,
+				84413EF41D0D3B69003AA001 /* UIImage+WaterMark.h */,
+				84413EF51D0D3B69003AA001 /* UIImage+WaterMark.m */,
 				84413D8A1D0D2BD0003AA001 /* Main.storyboard */,
 				84413D8D1D0D2BD0003AA001 /* Assets.xcassets */,
 				84413D8F1D0D2BD0003AA001 /* LaunchScreen.storyboard */,
@@ -251,6 +259,7 @@
 			files = (
 				84413DB51D0D2C12003AA001 /* ns_1.jpg in Resources */,
 				84413D911D0D2BD0003AA001 /* LaunchScreen.storyboard in Resources */,
+				84413EF81D0D3CC2003AA001 /* logo.png in Resources */,
 				84413D8E1D0D2BD0003AA001 /* Assets.xcassets in Resources */,
 				84413D8C1D0D2BD0003AA001 /* Main.storyboard in Resources */,
 			);
@@ -277,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84413EF61D0D3B69003AA001 /* UIImage+WaterMark.m in Sources */,
 				84413D891D0D2BD0003AA001 /* ViewController.m in Sources */,
 				84413D861D0D2BD0003AA001 /* AppDelegate.m in Sources */,
 				84413D831D0D2BD0003AA001 /* main.m in Sources */,
@@ -503,6 +513,7 @@
 				84413DAD1D0D2BD0003AA001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84413DAE1D0D2BD0003AA001 /* Build configuration list for PBXNativeTarget "ImageAddLogoTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +522,7 @@
 				84413DB01D0D2BD0003AA001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84413DB11D0D2BD0003AA001 /* Build configuration list for PBXNativeTarget "ImageAddLogoUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +531,7 @@
 				84413DB31D0D2BD0003AA001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
